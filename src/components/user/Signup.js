@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export default function Signup() {
 
-    const [cpf, setCpf] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
 
     const [name, setName] = useState("");
 
@@ -14,7 +14,7 @@ export default function Signup() {
     const [password, setPassword] = useState("");
 
     const handleChangeCpf = event => {
-        setCpf(event.target.value);
+        setConfirmPassword(event.target.value);
     };
 
     const handleChangeName = event => {
@@ -36,10 +36,9 @@ export default function Signup() {
                 MyWallet
             </Logo>
             <Forms type={"text"} placeholder='Nome' onChange={handleChangeName} value={name} required ></Forms>
-            <Forms type={"text"} placeholder='CPF' onChange={handleChangeCpf} value={cpf} required ></Forms>
             <Forms type={"email"} placeholder="E-mail" onChange={handleChangeEmail} value={email} required />
             <Forms type={"password"} placeholder='Senha' onChange={handleChangePassword} value={password} required />
-
+            <Forms type={"password"} placeholder='Confirme a senha' onChange={handleChangeCpf} value={confirmPassword} required ></Forms>
             <Button>
                 <ButtonText>Entrar</ButtonText>
             </Button>

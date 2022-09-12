@@ -8,6 +8,20 @@ const Container = styled.div`
     padding-top: 25vh;
 
 `
+const NavUser = styled.div`
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+`
+const Align = styled.div`
+    display: flex;
+    margin: 0rem 1.5rem;
+    padding: 1.5rem 0;
+    width: calc(100vw - 3rem);
+    height: calc(100vh - 3rem);
+    flex-direction: column;
+
+`
 
 const Logo = styled.div`
     ${'' /* margin-top: 25vh; */}
@@ -27,6 +41,7 @@ const Forms = styled.input`
     text-indent: .6rem;
     font-size: .9rem;
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
 `
 
 const HalfForms = styled.input`
@@ -69,4 +84,4 @@ const StyledLink = styled.p`
     font-weight: 700;
 
 `
-export { Container, Button, ButtonText, Logo, Forms, StyledLink, HalfForms }
+export { Container, Button, ButtonText, Logo, Forms, StyledLink, HalfForms, NavUser, Align }
