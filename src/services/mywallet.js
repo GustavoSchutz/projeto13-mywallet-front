@@ -12,4 +12,22 @@ function postLogin(loginUserData) {
     return promise;
 }
 
-export { postSignup, postLogin };
+function postBill(body, token) {
+    const auth = {};
+    auth.headers = {};
+    auth.headers.Authorization = "Bearer " + token;
+  
+    const promise = axios.post(`${BASE_URL}/bill`, body, auth);
+    return promise;
+}
+
+function getRecords(token) {
+    const auth = {};
+    auth.headers = {};
+    auth.headers.Authorization = "Bearer " + token;
+
+    const promise = axios.get(`${BASE_URL}/records`, auth);
+    return promise;
+}
+
+export { postSignup, postLogin, postBill, getRecords };
